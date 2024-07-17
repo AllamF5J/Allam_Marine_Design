@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ! Start Navbar */
+.navbar {
+  margin-top: 10px;
+
+  .collapse {
+    position: relative;
+    margin-right: 20px;
+
+    ul {
+      position: absolute;
+      right: 0;
+
+      li {
+        font-weight: 800;
+        font-size: 18px;
+        padding: 10px;
+
+        & a:hover,
+        & a:focus {
+          color: red;
+        }
+
+        &:last-child a:hover {
+          color: blue;
+        }
+      }
+    }
+  }
+}
+
+/* ! End Navbar */
+/* ! Start Landing */
+.landing {
+  background: url(../images/landing-01.webp) no-repeat;
+  background-size: cover;
+  height: calc(85vh - 62px);
+  position: relative;
+
+
+
+  .mouse-show {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    color: white;
+    text-align: center;
+
+    span {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+/* ! End Landing */
+/* ! Start Global */
+.global {
+  padding-bottom: 50px;
+
+  h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(75, 75, 75);
+  }
+
+  h2 {
+    width: 900px;
+    max-width: 100%;
+    margin: auto;
+    font-size: 43px;
+    font-weight: 700;
+    color: rgb(75, 75, 75);
+  }
+
+  .para {
+    p {
+      font-size: 19px;
+      color: #555;
+    }
+  }
+}
+
+/* ! End Global */
+
+/* ! Start Objects */
+.object {
+  text-align: center;
+
+  .data {
+    border-right: 1px solid black;
+    margin-bottom: 50px;
+  }
+
+  .data:nth-child(1),
+  .data:nth-child(4) {
+    border-left: 1px solid black;
+  }
+
+  h3 {
+    background-color: rgb(4, 4, 65);
+    color: white;
+    padding: 25px 60px;
+  }
+
+  h5 {
+    padding: 18px;
+    font-weight: bold;
+    color: #444;
+    height: 130px;
+  }
+
+  p {
+    padding: 18px;
+    font-size: 20px;
+    height: 170px;
+    font-weight: 500;
+  }
+
+  button {
+    padding: 20px 50px;
+    background-color: red;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+}
+
+/* ! End Objects */
+/* ! Start Contact US */
+.contact-us {
+  text-align: center;
+  background-color: rgb(226, 0, 0);
+  padding: 25px;
+
+  h3 {
+    font-weight: 800;
+    font-size: 42px;
+    color: #fff;
+    padding-bottom: 20px;
+  }
+
+  button {
+    padding: 22px 90px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    font-weight: 500;
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+    }
+  }
+}
+
+/* ! End Contact US */
+
+/* ! Start Footer */
+.footer {
+  background-color: rgb(4, 4, 65);
+  color: white;
+  padding: 20px;
+
+  .footer-title {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 25px;
+    padding-left: 0;
+  }
+
+  .address {
+    font-size: 20px;
+    color: #bdbdbd;
+  }
+
+  .contact-numbers {
+    span {
+      color: #bdbdbd;
+      font-weight: 500;
+    }
+  }
+
+  .uk-flag {
+    width: 300px;
+    padding-bottom: 20px;
+  }
+
+  #bluestorm {
+    color: #bdbdbd;
+
+    span {
+      &::after {
+        content: "❤️";
+        display: none;
+      }
+
+      &:hover,
+      &:hover::after {
+        color: red;
+        font-size: 20px;
+        display: unset;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 0;
+  }
+
+  .accordion {
+    ul {
+      li {
+        padding: 2px 0;
+
+        a {
+          text-decoration: none;
+          color: #bdbdbd;
+          font-size: 18px;
+          font-weight: 400;
+        }
+
+        .fas {
+          color: red;
+          padding-right: 3px;
+        }
+      }
+    }
+  }
+}
+
+/* ! End Footer */
