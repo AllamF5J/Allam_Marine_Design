@@ -1,9 +1,30 @@
+/* ! Start Global Variable */
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+}
+
+body {
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(4, 4, 65);
+}
+
+/* ! End Global Variable */
 /* ! Start Navbar */
 .navbar {
   margin-top: 10px;
@@ -32,6 +53,16 @@
       }
     }
   }
+
+  .navbar-toggler {
+    font-size: 25px;
+    border-color: white;
+    color: red;
+  }
+
+  .navbar-toggler[aria-expanded="true"] {
+    border-color: red;
+  }
 }
 
 /* ! End Navbar */
@@ -41,8 +72,6 @@
   background-size: cover;
   height: calc(85vh - 62px);
   position: relative;
-
-
 
   .mouse-show {
     position: absolute;
@@ -88,16 +117,20 @@
     color: rgb(75, 75, 75);
   }
 
-  .para {
-    p {
-      font-size: 19px;
-      color: #555;
-    }
+  .para:first-of-type {
+    font-size: 15px;
+    color: #555;
+    padding-right: 40px;
+  }
+
+  .para:last-of-type {
+    font-size: 15px;
+    color: #555;
+    padding-left: 40px;
   }
 }
 
 /* ! End Global */
-
 /* ! Start Objects */
 .object {
   text-align: center;
@@ -146,6 +179,142 @@
 }
 
 /* ! End Objects */
+/* ! Start Gen Sets */
+.gen-sets {
+  background-color: #f9f9f9;
+
+  .data {
+    p {
+      width: 750px;
+      max-width: 100%;
+      color: rgba(0, 0, 0, 0.7);
+      font-weight: 500;
+    }
+  }
+
+  .photo {
+
+    @media (max-width: 767px) {
+      img {
+        display: none;
+      }
+    }
+
+    @media (max-width: 992px) {
+      img {
+        display: none;
+      }
+    }
+  }
+}
+
+/* ! End Gen Sets */
+/* ! Start Production */
+.product-features {
+  .product-section-title {
+    font-weight: 800;
+    color: #444;
+    padding: 30px 0;
+    font-size: 48px;
+    max-width: 100%;
+  }
+
+  ul {
+    li {
+      padding: 5px 0;
+      font-size: 20px;
+      font-weight: 500;
+      color: #bdbdbd;
+
+      a {
+        text-decoration: none;
+        color: #bdbdbd;
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      .fas {
+        color: red;
+        padding-right: 3px;
+      }
+    }
+  }
+}
+
+/* ! End Production */
+/* ! Start Our Partners */
+.partner {
+  background-color: #f9f9f9;
+  color: #444;
+  text-align: center;
+
+  .engine {
+    padding-bottom: 50px;
+    border-bottom: 1px solid #999;
+  }
+
+  h3 {
+    font-weight: 800;
+    padding: 30px 0;
+    font-size: 48px;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  img {
+    width: 160px;
+    border: 2px solid black;
+    padding: 12px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+/* ! End Our Partners */
+/* ! Start CKD */
+.ckd {
+  .page-intro {
+    max-width: 100%;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+  }
+
+
+  .photo {
+
+    @media (max-width: 767px) {
+      img {
+        display: none;
+      }
+    }
+
+    @media (max-width: 992px) {
+      img {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    width: 770px;
+    max-width: 100%;
+  }
+}
+
+/* ! End CKD */
+/* ! Start Gentronics */
+.gentronics {
+  p {
+    font-weight: 500;
+  }
+}
+
+/* ! End Gentronics */
 /* ! Start Contact US */
 .contact-us {
   text-align: center;
@@ -177,7 +346,6 @@
 }
 
 /* ! End Contact US */
-
 /* ! Start Footer */
 .footer {
   background-color: rgb(4, 4, 65);
