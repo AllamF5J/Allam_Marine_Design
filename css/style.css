@@ -1,4 +1,4 @@
-/* ! Start Global Variable */
+/* ! Start Global Component */
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -24,11 +24,23 @@ body {
   background: rgb(4, 4, 65);
 }
 
-/* ! End Global Variable */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(226, 0, 0);
+}
+
+.scroller {
+  position: fixed;
+  left: 0;
+  top: 68px;
+  height: 3px;
+  width: 0;
+  background-color: #1877f2;
+  z-index: 9999;
+}
+
+/* ! End Global Component */
 /* ! Start Navbar */
 .navbar {
-  margin-top: 10px;
-
   .collapse {
     margin-right: 20px;
 
@@ -36,10 +48,21 @@ body {
       li {
         font-weight: 800;
         font-size: 18px;
-        padding: 10px;
+        padding: 5px 10px;
+
+        a {
+          color: black;
+        }
+
+        @media (max-width: 767px) {
+          font-weight: 600;
+          font-size: 14px;
+          padding: 5px 10px;
+        }
 
         & a:hover,
-        & a:focus {
+        & a:focus,
+        & .active {
           color: red;
         }
 
@@ -65,11 +88,11 @@ body {
 /* ! Start Landing */
 .landing {
   .carousel {
-    min-height: calc(90vh - 62px) !important;
+    min-height: calc(86vh - 62px) !important;
 
     .carousel-item {
-      height: calc(90vh - 62px);
-      max-height: 100%;
+      height: calc(86vh - 62px);
+      max-height: calc(86vh - 62px);
       max-width: 100%;
       background-size: cover;
     }
@@ -94,6 +117,12 @@ body {
     -o-transform: translateX(-50%);
     color: white;
     text-align: center;
+
+    @media (max-width: 767px) {
+      & {
+        display: none;
+      }
+    }
 
     span {
       font-size: 14px;
@@ -139,6 +168,11 @@ body {
 @media (max-width: 767px) {
   .landing {
     margin-bottom: -450px;
+  }
+
+
+  .overlay {
+    display: none;
   }
 
   .landing .overlay .text {
@@ -199,13 +233,20 @@ body {
   }
 
   @media (max-width: 767px) {
+    h1 {
+      font-size: 30px;
+      color: black;
+    }
+
+    h2 {
+      font-size: 22px;
+    }
 
     .para:first-of-type,
     .para:last-of-type {
       padding: 10px;
     }
   }
-
 }
 
 /* ! End Global */
@@ -253,6 +294,11 @@ body {
     -o-border-radius: 20px;
     font-weight: 500;
     font-size: 20px;
+
+    @media (max-width: 767px) {
+      padding: 15px 30px;
+      font-size: 14px;
+    }
   }
 }
 
@@ -284,10 +330,24 @@ body {
       }
     }
   }
+
+  @media (max-width: 767px) {
+    h1 {
+      color: black !important;
+    }
+
+    .page-intro {
+      font-size: 14px !important;
+    }
+
+    .name {
+      font-size: 14px;
+    }
+  }
 }
 
 /* ! End Gen Sets */
-/* ! Start Production */
+/* ! Start Production  (1)*/
 .product-features {
   .product-section-title {
     font-weight: 800;
@@ -311,15 +371,21 @@ body {
         font-weight: 400;
       }
 
-      .fas {
+      svg {
         color: red;
         padding-right: 3px;
       }
     }
   }
+
+  @media (max-width: 767px) {
+    h4 {
+      font-size: 30px !important;
+    }
+  }
 }
 
-/* ! End Production */
+/* ! End Production (1)*/
 /* ! Start Our Partners */
 .partner {
   background-color: #f9f9f9;
@@ -337,6 +403,10 @@ body {
     font-size: 48px;
     max-width: 100%;
     text-align: left;
+
+    @media (max-width: 767px) {
+      font-size: 34px;
+    }
   }
 
   img {
@@ -360,6 +430,11 @@ body {
     font-weight: 500;
   }
 
+  @media (max-width: 767px) {
+    h1 {
+      color: black !important;
+    }
+  }
 
   .photo {
 
@@ -390,6 +465,12 @@ body {
   p {
     font-weight: 500;
   }
+
+  @media (max-width: 767px) {
+    h1 {
+      color: black !important;
+    }
+  }
 }
 
 /* ! End Gentronics */
@@ -406,7 +487,7 @@ body {
 
   .img-responsive {
     border: none;
-    width: 80%;
+    width: 100%;
   }
 
   img {
@@ -418,16 +499,230 @@ body {
   .data {
     margin-top: 30px;
     width: 650px;
+    max-width: 90%;
+  }
+
+  @media (max-width: 767px) {
+    h1 {
+      color: black !important;
+    }
+
+    .intro p {
+      font-size: 20px;
+    }
   }
 }
 
 /* ! End Our History */
+/* ! Start Scroll Button */
+#top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  position: fixed;
+  bottom: 20px;
+  right: -1000px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: rgba(0, 38, 255, 0.233);
+  z-index: 99;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  transition: 0.3;
+  -webkit-transition: 0.3;
+  -moz-transition: 0.3;
+  -ms-transition: 0.3;
+  -o-transition: 0.3;
+}
+
+#top .fas {
+  font-size: 20px;
+  color: var(--white);
+  transition: 0.3;
+  -webkit-transition: 0.3;
+  -moz-transition: 0.3;
+  -ms-transition: 0.3;
+  -o-transition: 0.3;
+}
+
+#top:hover .fas {
+  transform: translateY(-4px);
+  -webkit-transform: translateY(-4px);
+  -moz-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  -o-transform: translateY(-4px);
+}
+
+/* ! End Scroll Button */
+/* ! Start Skills */
+.our-skills {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 2px solid #bdbdbd;
+  border-bottom: 2px solid #bdbdbd;
+}
+
+.our-skills .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 992px) {
+  .our-skills .container>div {
+    flex-basis: 40%;
+  }
+}
+
+.our-skills .container>div>h3 {
+  margin: 0 0 30px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+.our-skills .container>div>p {
+  color: #777;
+  line-height: 2;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.our-skills .testimonials .content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.our-skills .testimonials .content img {
+  width: 120px;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+
+@media (max-width: 767px) {
+  .our-skills .testimonials .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .our-skills .testimonials .content img {
+    margin: 0 auto 20px;
+  }
+}
+
+.our-skills .testimonials .text {
+  line-height: 1.8;
+  border-bottom: 1px solid #ccc;
+}
+
+.our-skills .testimonials .text p {
+  color: #777;
+  text-align: right;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.our-skills .testimonials .bullets {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.our-skills .testimonials .bullets li {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.our-skills .testimonials .bullets li.active {
+  background-color: rgb(12, 12, 170);
+  border-color: rgb(12, 12, 170);
+}
+
+.our-skills .skills .prog-holder {
+  margin-bottom: 40px;
+}
+
+.our-skills .skills .prog-holder h4 {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.our-skills .skills .prog-holder .prog {
+  background-color: #dedadc;
+  height: 28px;
+}
+
+.our-skills .skills .prog-holder span {
+  display: block;
+  width: 0;
+  height: 100%;
+  position: relative;
+  background-color: rgb(12, 12, 170);
+  transition: 2s;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.our-skills .skills .prog-holder .prog span::before {
+  content: attr(data-prog);
+  position: absolute;
+  background-color: black;
+  color: white;
+  top: -40px;
+  right: -18px;
+  padding: 4px;
+  width: 40px;
+  text-align: center;
+}
+
+.our-skills .skills .prog-holder .prog span::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 8px;
+  border-color: black transparent transparent;
+  right: -7px;
+  top: -8px;
+}
+
+/* ! End Skills */
 /* ! Start Contact US (1) */
 .form {
   background-color: #f9f9f9;
 
+  @media (max-width: 767px) {
+    h1 {
+      color: black !important;
+    }
+  }
+
   .intro {
     font-size: 23px;
+
+    @media (max-width: 767px) {
+      .strong {
+        font-size: 16px;
+        font-weight: 300 !important;
+
+      }
+    }
 
     p a {
       text-decoration: none;
@@ -497,6 +792,11 @@ body {
 
     margin-top: 8px;
   }
+
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 14px;
+  }
 }
 
 /* ! End Contact US (1) */
@@ -511,6 +811,10 @@ body {
     font-size: 42px;
     color: #fff;
     padding-bottom: 20px;
+
+    @media (max-width: 767px) {
+      font-size: 24px;
+    }
   }
 
   button {
@@ -521,6 +825,11 @@ body {
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
     font-weight: 500;
+
+    @media (max-width: 767px) {
+      font-weight: 500;
+      padding: 12px 20px;
+    }
 
     a {
       text-decoration: none;
@@ -597,12 +906,33 @@ body {
           font-weight: 400;
         }
 
-        .fas {
+        svg {
           color: red;
           padding-right: 3px;
         }
       }
     }
+  }
+
+  .contact ul svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .facebook {
+    background-color: #1877f2;
+  }
+
+  .twitter {
+    background-color: #1da1f2;
+  }
+
+  .linkedin {
+    background-color: #0077b5;
+  }
+
+  .youtube {
+    background-color: #ff0000;
   }
 }
 

@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="css/all.min.css">
   <!-- ! Bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- ! hCaptcha Example -->
+  <script src="https://hcaptcha.com/1/api.js" async defer></script>
   <!-- ! Font  Roboto Static -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,32 +39,35 @@
               title="Complete industrial generating sets from 5 kva to 3000 kva">Gen Sets</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#ckd" title="Genuine loose engines with matching alternators">CKD</a>
+            <a class="nav-link" href="#ckd" title="Genuine loose engines with matching alternators">CKD</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#gen"
+            <a class="nav-link" href="#gen"
               title="Control systems from simple push button start to multi-set synchronising systems">Gentronics</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#" title="Genuine loose engines with matching alternators">Spares</a>
+            <a class="nav-link" href="#" title="Genuine loose engines with matching alternators">Spares</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#" title="About Us">About Us</a>
+            <a class="nav-link" href="#about" title="About Us">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#history" title="History">History</a>
+            <a class="nav-link" href="#history" title="History">History</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#" title="Gallery">Gallery</a>
+            <a class="nav-link" href="#" title="Gallery">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#contact-us" title="GitHub Account">Contact</a>
+            <a class="nav-link" href="#contact-us" title="GitHub Account">Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   <!-- ! End Navbar -->
+  <!-- ! Start Scroller -->
+  <div class="scroller"></div>
+  <!-- ! End Scroller -->
   <!-- ! Start Landing -->
   <div class="landing d-flex justify-content-center align-items-center">
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -185,11 +190,14 @@
   <!-- ! Start Gen Sets -->
   <div class="gen-sets pt-5 pb-3" id="gen-sets">
     <div class="container">
+      <div class="photo text-center">
+        <img src="images/title.png" alt="" class="pb-2 pt-4" style="width: 100px;">
+      </div>
       <h1 class="text-black-50 text-center fa-4x py-3">Gen Sets</h1>
       <div class="page-intro pb-3 fs-5">All Tempest generating sets are designed and manufactured at our factory in
         England
       </div>
-      <p class="text-black-50"><strong>The name Tempest has always been synonymous with high-quality
+      <p class="text-black-50 name"><strong>The name Tempest has always been synonymous with high-quality
           engineering.</strong></p>
       <div class="row">
         <div class="data col-lg-8 col-sm-12">
@@ -310,6 +318,9 @@
   <!-- ! Start CKD -->
   <div class="ckd pt-5 pb-3" id="ckd">
     <div class="container">
+      <div class="photo text-center">
+        <img src="images/title.png" alt="" class="pb-2 pt-4" style="width: 100px;">
+      </div>
       <h1 class="text-black-50 text-center fa-4x py-3">CKD</h1>
       <div class="page-intro pb-5 fs-5">
         Enabling assemblers and manufacturers to benefit from purchasing the major components from one source
@@ -379,6 +390,9 @@
   <!-- ! Start Gentronics -->
   <div class="gentronics py-5" id="gen">
     <div class="container">
+      <div class="photo text-center">
+        <img src="images/title.png" alt="" class="pb-2 pt-4" style="width: 100px;">
+      </div>
       <h1 class="text-black-50 text-center fa-4x py-3">Gentronics</h1>
       <div class="page-intro pb-4 fs-5">
         Designed and manufactured at our factory in England
@@ -469,6 +483,9 @@
   <!-- ! Start Our History -->
   <div class="history py-5" id="history">
     <div class="container">
+      <div class="photo text-center">
+        <img src="images/title.png" alt="" class="pb-2 pt-4" style="width: 100px;">
+      </div>
       <div class="row">
         <div class="col-md-12">
           <h1 class="text-black-50 text-center fa-4x pb-4 pt-4">Our History</h1>
@@ -503,7 +520,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-12 col-md-6 data">
+        <div class="col-xs-12 col-md-6 col-lg-8 data">
           <p>During this time we have consistently manufactured products having high engineering design content such as
             marine propulsion engines and generators, refrigeration engines, special application diesel powered units as
             well as generating sets for military and industrial applications.</p>
@@ -524,7 +541,7 @@
             over
             85 years later!</p>
         </div>
-        <div class="col-xs-6 col-md-6">
+        <div class="col-xs-12 col-md-6 col-lg-4">
           <figure class="page-image">
             <img src="images/Leaflets-2.jpg" class="img-responsive">
           </figure>
@@ -560,20 +577,89 @@
     </div>
   </div>
   <!-- ! End Our History -->
+  <!-- ! Start Skills -->
+  <div class="our-skills pt-5" id="about">
+    <div class="container  pt-5">
+      <div class="testimonials">
+        <h3>Testimonials</h3>
+        <p>
+          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+          tincidunt.
+        </p>
+        <div class="content">
+          <img decoding="async" src="images/FB_IMG_1601598026208.jpg" alt="" />
+          <div class="text">
+            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+            tincidunt.
+            <p>Anna Doe, CEO</p>
+          </div>
+        </div>
+        <div class="content">
+          <img decoding="async" src="images/Mobile Banner Image.jpg" alt="" />
+          <div class="text">
+            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+            tincidunt.
+            <p>John Doe, CEO</p>
+          </div>
+        </div>
+        <ul class="bullets list-unstyled">
+          <li></li>
+          <li class="active"></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="skills">
+        <h3>Our Quality</h3>
+        <p>
+          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+          tincidunt.
+        </p>
+        <div class="prog-holder">
+          <h4>Gen Sets</h4>
+          <div class="prog">
+            <span style="width: 88%" data-prog="95%"></span>
+          </div>
+        </div>
+        <div class="prog-holder">
+          <h4>CKD</h4>
+          <div class="prog">
+            <span style="width: 83%" data-prog="93%"></span>
+          </div>
+        </div>
+        <div class="prog-holder">
+          <h4>Gentronics</h4>
+          <div class="prog">
+            <span style="width: 68%" data-prog="85%"></span>
+          </div>
+        </div>
+        <div class="prog-holder">
+          <h4>Spares</h4>
+          <div class="prog">
+            <span style="width: 72%" data-prog="87%"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ! End Skills -->
   <!-- ! Start Contact US (1)-->
   <div class="form  py-5" id="contact-us">
     <div class="container  px-5">
+      <div class="photo text-center">
+        <img src="images/title.png" alt="" class="pb-2 pt-4" style="width: 100px;">
+      </div>
       <h1 class="text-black-50 text-center fa-4x pb-4 pt-4">Contact Us</h1>
       <div class="intro">
-        <p><strong>Whether you'd like to speak to us about becoming your CKD supplier for engines and alternators, you'd
+        <p class="strong"><strong>Whether you'd like to speak to us about becoming your CKD supplier for engines and
+            alternators, you'd
             like
             to enquire about Tempest Gensets or we can help with the supply of spare parts, please contact our friendly
             team
             and we'll get you straight to the perfect person to help with your enquiry.</strong></p>
         <p>Allam Marine, Wyke Way, Melton, Hull, HU14 3BQ</p>
-        <p>Tel: +44 (0)1482 636300</p>
+        <p class="fs-5">Tel: +44 (0)1482 636300</p>
         <p>Email: <a href="mailto:info@allam.com" title="mailto:info@allam.com" contenteditable="false" target="_blank"
-            rel="external">info@allam.com</a></p>
+            rel="external" class="fs-5">info@allam.com</a></p>
       </div>
       <form action="" method="get">
         <div class="row">
@@ -879,6 +965,16 @@
               placeholder="e.g. The reason for my enquiry is..." required></textarea>
           </div>
         </div>
+        <div>
+          <iframe
+            src="https://newassets.hcaptcha.com/captcha/v1/12d4359/static/hcaptcha.html#frame=checkbox&amp;id=041loxjoxi7i&amp;host=allam.com&amp;sentry=true&amp;reportapi=https%3A%2F%2Faccounts.hcaptcha.com&amp;recaptchacompat=off&amp;custom=false&amp;hl=en&amp;tplinks=on&amp;pstissuer=https%3A%2F%2Fpst-issuer.hcaptcha.com&amp;sitekey=286e82bd-0570-43f8-929d-b4bbd106b9b3&amp;size=normal&amp;theme=light&amp;origin=https%3A%2F%2Fallam.com"
+            tabindex="0" frameborder="0" scrolling="no"
+            allow="private-state-token-issuance 'src'; private-state-token-redemption 'src'"
+            title="Widget containing checkbox for hCaptcha security challenge" data-hcaptcha-widget-id="041loxjoxi7i"
+            data-hcaptcha-response="" style="pointer-events: auto; width: 303px; height: 78px; overflow: hidden;">
+          </iframe>
+          <textarea id="h-captcha-response-041loxjoxi7i" name="h-captcha-response" style="display: none;"></textarea>
+        </div>
         <button type="submit" class="btn">Contact Us</button>
       </form>
     </div>
@@ -989,15 +1085,40 @@
               </li>
             </ul>
           </div>
+          <ul class="connection d-flex mt-4 list-unstyled gap-3">
+            <li>
+              <a class="d-block text-light" href="https:www.facebook.com" target="_blank"><i
+                  class="fa-brands fa-facebook fa-lg facebook rounded-circle p-2"></i></a>
+            </li>
+            <li>
+              <a class="d-block text-light" href="https:www.twitter.com" target="_blank"><i
+                  class="fa-brands fa-twitter fa-lg twitter rounded-circle p-2"></i></a>
+            </li>
+            <li>
+              <a class="d-block text-light" href="https:www.linkedin.com" target="_blank"><i
+                  class="fa-brands fa-linkedin fa-lg linkedin rounded-circle p-2"></i></a>
+            </li>
+            <li>
+              <a class="d-block text-light" href="https:www.youtube.com" target="_blank"><i
+                  class="fa-brands fa-youtube fa-lg youtube rounded-circle p-2"></i></a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
   <!-- ! End Footer -->
+  <!-- ! Start Scroll Button -->
+  <a id="top" style="right: 20px;" href="#">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+  <!-- ! End Scroll Button -->
   <!---------------------------------------------------------------------------->
   <script src="js/bootstrap.bundle.min.js"></script>
   <!-- ! This Render Icon As SVG... -->
   <script src="js/all.min.js"></script>
+  <!-- ! JavaScript File -->
+  <script src="js/main.js"></script>
 </body>
 
 </html>
