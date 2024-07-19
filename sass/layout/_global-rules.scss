@@ -1,0 +1,27 @@
+// ! Start Global Component 
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+}
+
+body {
+  user-select: none;
+}
+
+// ! End Global Component 
+
+// ! Start Gentronics
+.gentronics {
+  p {
+    font-weight: 500;
+  }
+}
+// ! End Gentronics

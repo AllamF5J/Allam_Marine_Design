@@ -1,0 +1,37 @@
+@mixin responsive-h1-colors($color-small, $header-color) {
+  @media (max-width: 767px) {
+    .gen-sets h1,
+    .ckd h1,
+    .gentronics h1,
+    .form h1 {
+      color: $color-small !important;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .gen-sets h1,
+    .ckd h1,
+    .gentronics h1,
+    .form h1 {
+      color: $header-color;
+    }
+  }
+}
+
+// ! Mixin to apply the hide function
+@mixin responsive-hide($element, $breakpoints...) {
+  #{$element} {
+    @each $breakpoint in $breakpoints {
+      @media (max-width: #{$breakpoint}) {
+        display: none;
+      }
+    }
+  }
+}
+
+// ! Mixin to apply responsive font size
+@mixin responsive-font-size($font-size, $breakpoint) {
+  @media (max-width: $breakpoint) {
+    font-size: $font-size;
+  }
+}
