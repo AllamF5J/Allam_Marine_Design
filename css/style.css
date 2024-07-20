@@ -193,7 +193,7 @@
 
   @media (max-width: 767px) {
     h1 {
-      font-size: 30px;
+      font-size: 48px !important;
       color: black;
     }
 
@@ -567,6 +567,12 @@
 .form {
   background-color: #f9f9f9;
 
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 55px !important;
+    }
+  }
+
   .intro {
     font-size: 23px;
 
@@ -575,6 +581,10 @@
         font-size: 16px;
         font-weight: 300 !important;
 
+      }
+
+      h1 {
+        font-size: 10px !important;
       }
     }
 

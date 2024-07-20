@@ -13,8 +13,8 @@ html {
 
 body {
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .gentronics p {
@@ -46,15 +46,12 @@ body {
 .footer .facebook {
   background-color: #1877f2;
 }
-
 .footer .twitter {
   background-color: #1da1f2;
 }
-
 .footer .linkedin {
   background-color: #0077b5;
 }
-
 .footer .youtube {
   background-color: #ff0000;
 }
@@ -104,7 +101,6 @@ body {
 }
 
 @media (max-width: 767px) {
-
   .gen-sets h1,
   .ckd h1,
   .gentronics h1,
@@ -112,9 +108,7 @@ body {
     color: black !important;
   }
 }
-
 @media (min-width: 768px) {
-
   .gen-sets h1,
   .ckd h1,
   .gentronics h1,
@@ -122,17 +116,13 @@ body {
     color: rgba(0, 0, 0, 0.7);
   }
 }
-
 @media (max-width: 767px) {
-
   .gen-sets .hidden,
   .ckd .hidden {
     display: none;
   }
 }
-
 @media (max-width: 992px) {
-
   .gen-sets .hidden,
   .ckd .hidden {
     display: none;
@@ -144,5 +134,8 @@ body {
     font-size: 16px;
   }
 }
-
-/*# sourceMappingURL=main.css.map */
+@media (max-width: 767px) {
+  .product-features .row div:last-child {
+    margin-top: -16px !important;
+  }
+}/*# sourceMappingURL=main.css.map */
