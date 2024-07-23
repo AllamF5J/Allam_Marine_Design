@@ -665,7 +665,7 @@
       </div>
       <form action="" method="get">
         <div class="row">
-          <p class="text-black-50 name">Please enter your full name.</p>
+          <p class="name" id="errorName1">Please enter your first name.</p>
           <div class="col-lg-6 col-sm-12">
             <label for="firstName">First Name <span>*</span></label><br>
             <input type="text" id="firstName" placeholder="e.g. Peter" name="firstName" autocomplete="first-name"
@@ -947,9 +947,15 @@
             </select>
           </div>
           <div class="col-lg-6 col-sm-12">
-            <label for="phone">Phone <span>*</span><br></label>
-            <input type="text" id="phone" name="fields[phone][phone]" autocomplete="tel-national" class="w-100"
-              required>
+            <label for="zip">Zip <span>*</span></label><br>
+            <input id="zip" class="fui-input w-100" name="fields[zip]" type="text" required
+              data-fui-id="contactForm-zip" data-fui-message="Please enter your zip code" value="11511">
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <div id="phone-error" class="error-message" style="display: none;">Please enter a valid phone number.</div>
+            <label for="phone">Phone <span>*</span></label>
+            <input type="tel" id="phone" name="fields[phone][phone]" autocomplete="tel-national" class="w-100" required
+              minlength="7" maxlength="16" pattern="^\+?\d{0,3}?[- .]?\(?\d{1,4}?\)?[- .]?\d{1,4}[- .]?\d{1,9}$">
           </div>
           <div class="col-lg-6 col-sm-12"><label for="fui-contactForm-pnzxuy-fields-natureOfEnquiry">Nature of
               Enquiry</label><br>
@@ -960,6 +966,17 @@
               <option value="General Enquiry" selected>General Enquiry</option>
             </select>
           </div>
+          <div class="col-lg-6 col-sm-12">
+            <div id="errorObject" class="error-message">Please select at least one object.</div>
+            <label class="w-100">Objects <span>*</span>
+              <div id="object">
+                <label class="checkbox"><input type="checkbox" name="object" value="Gen-sets"> Gen-sets</label>
+                <label class="checkbox"><input type="checkbox" name="object" value="CKD"> CKD</label>
+                <label class="checkbox"><input type="checkbox" name="object" value="Gentronics"> Gentronics</label>
+                <label class="checkbox"><input type="checkbox" name="object" value="Spares"> Spares</label>
+              </div>
+            </label>
+          </div>
           <div class="col-12">
             <label for="message">Message <span>*</span><br></label>
             <p class="text-black-50 name">Please enter your comments.</p>
@@ -967,7 +984,7 @@
               placeholder="e.g. The reason for my enquiry is..." required></textarea>
           </div>
         </div>
-        <div>
+        <div class="col-lg-6 col-sm-12">
           <iframe
             src="https://newassets.hcaptcha.com/captcha/v1/12d4359/static/hcaptcha.html#frame=checkbox&amp;id=041loxjoxi7i&amp;host=allam.com&amp;sentry=true&amp;reportapi=https%3A%2F%2Faccounts.hcaptcha.com&amp;recaptchacompat=off&amp;custom=false&amp;hl=en&amp;tplinks=on&amp;pstissuer=https%3A%2F%2Fpst-issuer.hcaptcha.com&amp;sitekey=286e82bd-0570-43f8-929d-b4bbd106b9b3&amp;size=normal&amp;theme=light&amp;origin=https%3A%2F%2Fallam.com"
             tabindex="0" frameborder="0" scrolling="no"
@@ -978,6 +995,7 @@
           <textarea id="h-captcha-response-041loxjoxi7i" name="h-captcha-response" style="display: none;"></textarea>
         </div>
         <button type="submit" class="btn">Contact Us</button>
+        <button type="reset" class="btn" id="clear-btn">Clear</button>
       </form>
     </div>
   </div>
