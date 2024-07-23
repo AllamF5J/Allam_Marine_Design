@@ -642,6 +642,11 @@
       margin-bottom: 15px;
     }
 
+    select,
+    textarea {
+      padding: 10.7px 15px;
+    }
+
     textarea {
       margin-top: 6px;
       height: 220px;
