@@ -39,7 +39,6 @@ window.addEventListener('load', function (e) {
   const textName1 = document.getElementById("firstName");
   const errorName1 = document.getElementById("errorName1");
 
-  textName1.focus();
   textName1.addEventListener('blur', () => {
     const value = textName1.value;
 
